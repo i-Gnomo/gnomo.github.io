@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,12 +93,15 @@
 
 
 
+<meta name="description" content="you can do your best">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gnomo">
+<meta property="og:title" content="Gnomo&#39;s Notes">
 <meta property="og:url" content="http://gnomo.com/index.html">
-<meta property="og:site_name" content="Gnomo">
+<meta property="og:site_name" content="Gnomo&#39;s Notes">
+<meta property="og:description" content="you can do your best">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gnomo">
+<meta name="twitter:title" content="Gnomo&#39;s Notes">
+<meta name="twitter:description" content="you can do your best">
 
 
 
@@ -106,13 +109,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -132,12 +135,22 @@
 
 
 
-  <title>Gnomo</title>
+  <title>Gnomo's Notes</title>
   
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b45364aeb3786352819e59963d8cc7ec";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -150,7 +163,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -170,12 +183,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Gnomo</span>
+        <span class="site-title">Gnomo's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">gnomo's station</p>
+        <p class="site-subtitle">Quick notes</p>
       
   </div>
 
@@ -200,7 +213,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -210,7 +223,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -220,7 +233,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -253,16 +266,136 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/06/15/我的第一篇博文/">
+    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/06/21/将hexo博客主题更换为NexT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zsx">
+      <meta itemprop="name" content="Gnomo">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gnomo's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/21/将hexo博客主题更换为NexT/" itemprop="url">将hexo博客主题更换为NexT</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T15:40:00+08:00">
+                2017-06-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>hexo个人博客使用很灵活，可以自定义主题，浏览站点时看到许多很漂亮的主题，虽然自己不会开发主题，但是按照NexT的配置文档，用了一下试试看。</p>
+<p>在博客本地存放位置的根目录下 git Bash；将想要的主题从github上克隆到本地目录，使用如下命令行，这样主题就被clone到我们的themes文件夹了。</p>
+<p><code>$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+<p>在博客的配置文件中_config.yml修改theme为next;</p>
+<p><code>hexo s --debug</code>进行本地测试；</p>
+<p>之后我们会看到自己博客的新主题：大概是这个样子</p>
+<p><img src="/images/534534534.jpg" alt="534534534"></p>
+<p>这个主题非常简洁，这是默认的外观，当然我们也可以对这个主题做更多的配置，更改外观，在NexT主题官网上我们还可以学习如何引入第三方服务，如加入评论，百度统计等。</p>
+<p><em>可以参考博文 <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank" rel="external">NexT</a> </em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/06/15/我的第一篇博文/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gnomo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gnomo's Notes">
     </span>
 
     
@@ -282,9 +415,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-15T11:43:05+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T11:43:05+08:00">
                 2017-06-15
               </time>
             
@@ -398,11 +531,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="zsx" />
-          <p class="site-author-name" itemprop="name">zsx</p>
+               src="/images/avatar.jpg"
+               alt="Gnomo" />
+          <p class="site-author-name" itemprop="name">Gnomo</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">you can do your best</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -410,8 +543,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -423,8 +556,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -469,18 +602,18 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">zsx</span>
+  <span class="author" itemprop="copyrightHolder">Gnomo</span>
 </div>
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -559,6 +692,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
 
   
     <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
