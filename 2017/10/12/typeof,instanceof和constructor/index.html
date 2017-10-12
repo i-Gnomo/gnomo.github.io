@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="input enter," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="这两天关于项目中列表排序的的问题，php程序员建议在表格中增加input输入框order字段，来作为输入提交给每行数据进行排序。 关于这个之前大概也有做过，所以便有了下面的思路。 键盘控制输入类型只能为数字，以及小键盘的数字，当输入为中文时，keydown事件匹配中文后对文本进行字符串替换；当键盘触发enter按键时，提交input框中的文本，或者input框失去焦点时，也提交；但是最后有一个bu">
-<meta name="keywords" content="input enter">
+<meta name="description" content="(1)数据类型7中基础数据类型6中原始类型以及Object类型String,Number,Boolean,Null,Undefined,Symbol (2)如何判断数据类型(2.0)typeof 判断基础数据类型 返回字符串 123456typeof(1) //&amp;amp;quot;number&amp;amp;quot;typeof(true) //&amp;quot;boolean&amp;quot;typeof(&amp;a">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="控制input输入框只输入数字并且enter键时提交">
-<meta property="og:url" content="http://gnomo.com/2017/06/23/控制input输入框内只输入数字enter提交/index.html">
+<meta property="og:title" content="typeof,instanceof和constructor">
+<meta property="og:url" content="http://gnomo.com/2017/10/12/typeof,instanceof和constructor/index.html">
 <meta property="og:site_name" content="Gnomo&#39;s Notes">
-<meta property="og:description" content="这两天关于项目中列表排序的的问题，php程序员建议在表格中增加input输入框order字段，来作为输入提交给每行数据进行排序。 关于这个之前大概也有做过，所以便有了下面的思路。 键盘控制输入类型只能为数字，以及小键盘的数字，当输入为中文时，keydown事件匹配中文后对文本进行字符串替换；当键盘触发enter按键时，提交input框中的文本，或者input框失去焦点时，也提交；但是最后有一个bu">
-<meta property="og:updated_time" content="2017-06-29T06:12:27.253Z">
+<meta property="og:description" content="(1)数据类型7中基础数据类型6中原始类型以及Object类型String,Number,Boolean,Null,Undefined,Symbol (2)如何判断数据类型(2.0)typeof 判断基础数据类型 返回字符串 123456typeof(1) //&amp;amp;quot;number&amp;amp;quot;typeof(true) //&amp;quot;boolean&amp;quot;typeof(&amp;a">
+<meta property="og:updated_time" content="2017-10-12T09:45:17.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="控制input输入框只输入数字并且enter键时提交">
-<meta name="twitter:description" content="这两天关于项目中列表排序的的问题，php程序员建议在表格中增加input输入框order字段，来作为输入提交给每行数据进行排序。 关于这个之前大概也有做过，所以便有了下面的思路。 键盘控制输入类型只能为数字，以及小键盘的数字，当输入为中文时，keydown事件匹配中文后对文本进行字符串替换；当键盘触发enter按键时，提交input框中的文本，或者input框失去焦点时，也提交；但是最后有一个bu">
+<meta name="twitter:title" content="typeof,instanceof和constructor">
+<meta name="twitter:description" content="(1)数据类型7中基础数据类型6中原始类型以及Object类型String,Number,Boolean,Null,Undefined,Symbol (2)如何判断数据类型(2.0)typeof 判断基础数据类型 返回字符串 123456typeof(1) //&amp;amp;quot;number&amp;amp;quot;typeof(true) //&amp;quot;boolean&amp;quot;typeof(&amp;a">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://gnomo.com/2017/06/23/控制input输入框内只输入数字enter提交/"/>
+  <link rel="canonical" href="http://gnomo.com/2017/10/12/typeof,instanceof和constructor/"/>
 
 
 
 
 
-  <title>控制input输入框只输入数字并且enter键时提交 | Gnomo's Notes</title>
+  <title>typeof,instanceof和constructor | Gnomo's Notes</title>
   
 
 
@@ -266,7 +266,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/06/23/控制input输入框内只输入数字enter提交/">
+    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/10/12/typeof,instanceof和constructor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gnomo">
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">控制input输入框只输入数字并且enter键时提交</h1>
+          <h1 class="post-title" itemprop="name headline">typeof,instanceof和constructor</h1>
         
 
         <div class="post-meta">
@@ -295,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T17:49:05+08:00">
-                2017-06-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T17:39:26+08:00">
+                2017-10-12
               </time>
             
 
@@ -330,11 +330,18 @@
       
 
       
-        <p>这两天关于项目中列表排序的的问题，php程序员建议在表格中增加input输入框order字段，来作为输入提交给每行数据进行排序。</p>
-<p>关于这个之前大概也有做过，所以便有了下面的思路。</p>
-<p>键盘控制输入类型只能为数字，以及小键盘的数字，当输入为中文时，keydown事件匹配中文后对文本进行字符串替换；当键盘触发enter按键时，提交input框中的文本，或者input框失去焦点时，也提交；<strong>但是最后有一个bug</strong>，就是当正在输入中文时切换输入法，那么输入会变为字母并且enter提交，对于这个暂时未有合适的办法。后续可以解决时候再更新本文。</p>
-<h5 id="代码如下，可以参考"><a href="#代码如下，可以参考" class="headerlink" title="代码如下，可以参考"></a>代码如下，可以参考</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * table cell number order property</div><div class="line"> */</div><div class="line">$(function()&#123;</div><div class="line">    //网站管理 - 新闻 活动 底部链接 输入order值排序</div><div class="line">    $(document).on(&quot;keydown keyup press change&quot;,&quot;input[table-cell-number=true]&quot;,function(e)&#123;</div><div class="line">        var _input = $(this); </div><div class="line">        var c = e.keyCode || e.charCode;</div><div class="line">        var r = checkKeyResult(_input,c);</div><div class="line">        // console.log(r+&apos;--&apos;);</div><div class="line">        if(r)&#123;</div><div class="line">            if(r &amp;&amp; r == 13)&#123;</div><div class="line">                attrSort($(this),$(this).val(),iorderCallback);</div><div class="line">            &#125;</div><div class="line">        &#125;else&#123;</div><div class="line">            e.preventDefault();</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">    $(document).on(&quot;blur&quot;,&quot;input[table-cell-number=true]&quot;,function(e)&#123;</div><div class="line">        attrSort($(this),$(this).val(),iorderCallback);</div><div class="line">    &#125;)</div><div class="line">    function attrSort(obj,val,callbackFun)&#123;</div><div class="line">        //is empty submit or don&apos;t</div><div class="line">        var _this = obj;</div><div class="line">        var _sort = _this.attr(&quot;attr-sort&quot;);</div><div class="line">        var _id = _this.attr(&quot;attr-id&quot;);</div><div class="line"></div><div class="line">        var _val = $.trim(val)==&apos;&apos; ? 0:val;</div><div class="line">            if(_val==_sort)&#123;</div><div class="line">                //没改变</div><div class="line">                return false;</div><div class="line">            &#125;else&#123;</div><div class="line">                //已改变 ajax提交</div><div class="line">                return callbackFun(_id,_val);</div><div class="line">            &#125;</div><div class="line">    &#125;</div><div class="line">    function checkKeyResult(that,c)&#123;</div><div class="line">        if((c &gt;=48 &amp;&amp; c &lt;= 57)||(c &gt;= 96 &amp;&amp; c &lt;= 105))&#123;</div><div class="line">            // console.log(c+&apos;数字&apos;);</div><div class="line">            return true;</div><div class="line">        &#125;else if(c == 8)&#123;</div><div class="line">            // console.log(c+&apos;栅格&apos;);</div><div class="line">            return true;</div><div class="line">        &#125;else if(c == 13)&#123;</div><div class="line">            // console.log(c+&apos;enter&apos;);</div><div class="line">            return 13;</div><div class="line">        &#125;else&#123;</div><div class="line">            // console.log(c+&apos;中文或字符&apos;);</div><div class="line">            that.val(that.val().replace(/[\u4e00-\u9fa5]/g, &apos;&apos;));</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //------------------</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>后续会再次更新。</p>
+        <h4 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="(1)数据类型"></a>(1)数据类型</h4><p>7中基础数据类型6中原始类型以及Object类型<br>String,Number,Boolean,Null,Undefined,Symbol</p>
+<h4 id="2-如何判断数据类型"><a href="#2-如何判断数据类型" class="headerlink" title="(2)如何判断数据类型"></a>(2)如何判断数据类型</h4><p>(2.0)<br>typeof 判断基础数据类型 返回字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">typeof(1) //&amp;quot;number&amp;quot;</div><div class="line">typeof(true) //&quot;boolean&quot;</div><div class="line">typeof(&apos;hello&apos;) //&quot;string&quot;</div><div class="line">typeof(null) //&quot;object&quot;</div><div class="line">typeof(undefined) //&quot;undefined&quot;</div><div class="line">对于对象类型只能得到&quot;object&quot;</div></pre></td></tr></table></figure>
+<p>注意以下几处的用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">typeof(null) //&quot;object&quot;</div><div class="line">typeof(NaN) //&quot;number&quot;</div><div class="line">typeof(typeof 1) //&quot;string&quot;</div><div class="line">函数对象function setName()&#123;&#125; typeof(setName) //&quot;function&quot;</div><div class="line">typeof Math.sin === &quot;function&quot;;</div><div class="line">typeof 1/0 === &quot;NaN&quot;</div><div class="line">typeof alert === &quot;function&quot;</div><div class="line">在 IE 6, 7 和 8 中，大多数的宿主对象是对象，而不是函数，例如：</div><div class="line">typeof alert === &quot;object&quot;</div></pre></td></tr></table></figure></p>
+<p>(2.1)<br>instanceof 判断引用数据类型 返回true或者false<br>测试一个对象在其原型链上是否存在一个构造函数的prototype属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array();</div><div class="line">console.log(myArr instanceof Array); //true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function C()&#123;&#125; </div><div class="line">function D()&#123;&#125; </div><div class="line">var o = new C();</div><div class="line">// true，因为 Object.getPrototypeOf(o) === C.prototype</div><div class="line">o instanceof C;</div></pre></td></tr></table></figure>
+<p>判断数据类型是否是数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Array.isArray([]) //true</div><div class="line">Object.prototype.toString.call([]) === &quot;[object Array]&quot; //true</div></pre></td></tr></table></figure>
+<p>(2.2)<br>object.constructor 返回创建实例对象的Object构造函数的引用，为只读的原始类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var son = 5;</div><div class="line">console.log(son.constructor.name); //Number</div><div class="line">var myArr = new Array();</div><div class="line">console.log(myArr.constructor.name); //Array</div><div class="line">console.log(myArr.constructor===Array); //true</div></pre></td></tr></table></figure>
+<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function myFunction(name)&#123;</div><div class="line">console.log(name)</div><div class="line">&#125;; </div><div class="line">var myfun = new myFunction(&apos;zsx&apos;);</div><div class="line">console.log(&apos;myfun.constructor is &apos;+ myfun.constructor);</div><div class="line">//zsx</div><div class="line">//myfun.constructor is function myFunction(name)&#123;console.log(name)&#125;</div><div class="line">console.log(&apos;myfun.constructor is &apos;+ myFunction.prototype.constructor);</div><div class="line">//myfun.constructor is function myFunction(name)&#123;console.log(name)&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 
       
@@ -365,7 +372,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/input-enter/" rel="tag"># input enter</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
         </div>
       
@@ -378,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/21/将hexo博客主题更换为NexT/" rel="next" title="将hexo博客主题更换为NexT">
-                <i class="fa fa-chevron-left"></i> 将hexo博客主题更换为NexT
+              <a href="/2017/10/11/Document cookie操作/" rel="next" title="Document cookie 操作">
+                <i class="fa fa-chevron-left"></i> Document cookie 操作
               </a>
             
           </div>
@@ -387,10 +394,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/23/关于图片懒加载/" rel="prev" title="关于图片懒加载">
-                关于图片懒加载 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -510,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#代码如下，可以参考"><span class="nav-number">1.</span> <span class="nav-text">代码如下，可以参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数据类型"><span class="nav-number">1.</span> <span class="nav-text">(1)数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何判断数据类型"><span class="nav-number">2.</span> <span class="nav-text">(2)如何判断数据类型</span></a></li></ol></div>
             
 
           </div>
