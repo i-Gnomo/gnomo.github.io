@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://gnomo.com/2017/10/11/Document cookie操作/index.html">
 <meta property="og:site_name" content="Gnomo&#39;s Notes">
 <meta property="og:description" content="12345678910111213141516function getCookieData(ckname)&amp;#123;	    var cookies = document.cookie;	    var name = ckname+&amp;apos;=&amp;apos;;	    var name_s = cookies.indexOf(name);	    var s,e;	    if(name_s&amp;g">
-<meta property="og:updated_time" content="2017-10-11T09:18:30.635Z">
+<meta property="og:updated_time" content="2017-10-12T10:01:10.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Document cookie 操作">
 <meta name="twitter:description" content="12345678910111213141516function getCookieData(ckname)&amp;#123;	    var cookies = document.cookie;	    var name = ckname+&amp;apos;=&amp;apos;;	    var name_s = cookies.indexOf(name);	    var s,e;	    if(name_s&amp;g">
@@ -334,6 +334,7 @@
 <p>定义一个getCookieData的方法，传入参数ckname为要查找的cookie的name。</p>
 <p>在浏览器中，cookie是以name=value的方式存在的，document.cookie获取到的值为 name1=value1;name2=value2;name3=value3; etc.的字符串，</p>
 <p>indexOf获取要查找的cookie name的索引值 根据索引值substring截取字符串，如果cookie name没有找到对应的索引则返回’’空内容。</p>
+<p><em>可以参考MDN文章 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" title="一个支持unicode的cookie读取/写入器" target="_blank" rel="external">一个支持unicode的cookie读取/写入器</a> </em></p>
 <hr>
 
       
