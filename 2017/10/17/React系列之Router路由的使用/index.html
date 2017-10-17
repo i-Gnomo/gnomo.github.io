@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="React," />
 
 
 
@@ -93,15 +93,17 @@
 
 
 
-<meta name="description" content="you can do your best">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gnomo&#39;s Notes">
-<meta property="og:url" content="http://gnomo.com/tags/hexo-NexT/index.html">
+<meta name="description" content="1、路由2、嵌套路由3、path属性4、path属性使用通配符 12345&amp;lt;Route path=&amp;quot;/repos/:userName/:repoName&amp;quot; component=&amp;#123;Repo&amp;#125;/&amp;gt;path=&amp;quot;/repos(/:name)&amp;quot;path=&amp;quot;/repos/.&amp;quot;path=&amp;quot;/repos/*&amp;qu">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Router路由的使用">
+<meta property="og:url" content="http://gnomo.com/2017/10/17/React系列之Router路由的使用/index.html">
 <meta property="og:site_name" content="Gnomo&#39;s Notes">
-<meta property="og:description" content="you can do your best">
+<meta property="og:description" content="1、路由2、嵌套路由3、path属性4、path属性使用通配符 12345&amp;lt;Route path=&amp;quot;/repos/:userName/:repoName&amp;quot; component=&amp;#123;Repo&amp;#125;/&amp;gt;path=&amp;quot;/repos(/:name)&amp;quot;path=&amp;quot;/repos/.&amp;quot;path=&amp;quot;/repos/*&amp;qu">
+<meta property="og:updated_time" content="2017-10-17T03:44:14.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gnomo&#39;s Notes">
-<meta name="twitter:description" content="you can do your best">
+<meta name="twitter:title" content="React Router路由的使用">
+<meta name="twitter:description" content="1、路由2、嵌套路由3、path属性4、path属性使用通配符 12345&amp;lt;Route path=&amp;quot;/repos/:userName/:repoName&amp;quot; component=&amp;#123;Repo&amp;#125;/&amp;gt;path=&amp;quot;/repos(/:name)&amp;quot;path=&amp;quot;/repos/.&amp;quot;path=&amp;quot;/repos/*&amp;qu">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://gnomo.com/tags/hexo-NexT/"/>
+  <link rel="canonical" href="http://gnomo.com/2017/10/17/React系列之Router路由的使用/"/>
 
 
 
 
 
-  <title>标签: hexo NexT | Gnomo's Notes</title>
+  <title>React Router路由的使用 | Gnomo's Notes</title>
   
 
 
@@ -170,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -254,44 +256,159 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>hexo NexT<small>标签</small>
-      </h1>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://gnomo.com/2017/10/17/React系列之Router路由的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gnomo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gnomo's Notes">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React Router路由的使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T11:40:20+08:00">
+                2017-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>1、路由<br>2、嵌套路由<br>3、path属性<br>4、path属性使用通配符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;Route path=&quot;/repos/:userName/:repoName&quot; component=&#123;Repo&#125;/&gt;</div><div class="line">path=&quot;/repos(/:name)&quot;</div><div class="line">path=&quot;/repos/.&quot;</div><div class="line">path=&quot;/repos/*&quot;</div><div class="line">path=&quot;/repos/*.jpg&quot;</div></pre></td></tr></table></figure>
+<p>使用通配符的路由要写在路由规则的底部，防止同时匹配到两个规则第二个规则不生效！</p>
+<p>5、IndexRoute组件<br>使用<indexroute component="{Home}">可以显式指定Home是根路由的子组件，即指定默认情况下加载的子组件，<br>本身的展示内容由Home组件定义</indexroute></p>
+<p>6、Redirect重定向组件 用于路由的跳转<br>例如，访问”/home/mylist/:id” 会自动跳转到”/mylist/:id”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Route path=&quot;home&quot; component=&quot;&#123;Home&#125;&quot;&gt;</div><div class="line">    &lt;Redirect from=&quot;mylist/:id&quot; to=&quot;/mylist/:id&quot; /&gt;</div><div class="line">&lt;/Route&gt;</div></pre></td></tr></table></figure>
+<p>7、IndexRedirect组件<br>访问跟路由时 用户重定向到Welcome组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Route path=&quot;/&quot; component=&#123;App&#125;&gt;</div><div class="line">  &lt;IndexRedirect to=&quot;/welcome&quot; /&gt;</div><div class="line">  &lt;Route path=&quot;welcome&quot; component=&#123;Welcome&#125; /&gt;</div><div class="line">&lt;/Route&gt;</div></pre></td></tr></table></figure>
+<p>8、Link组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;Link to=&quot;/about&quot; activeStyle=&#123;&#123;color: &apos;red&apos;&#125;&#125;&gt;About&lt;/Link&gt;</div><div class="line">&lt;Link to=&quot;/about&quot; activeClassName=&quot;active&quot;&gt;About&lt;/Link&gt;</div></pre></td></tr></table></figure>
+<p>9、IndexLink组件<br>10、history属性<br>    hashHistory 通过URL的hash部分（#）切换<br>    browserHistory 调用浏览器的History API，此时开发服务器可使用webpack-dev-server<br>    createMemoryHistory 主要用于服务器渲染。它创建一个内存中的history对象，不与浏览器URL互动。<br><em>参考github上的demo <a href="https://github.com/i-Gnomo/react-router-tutorial" title="react-router-tutorial" target="_blank" rel="external">react-router-tutorial</a></em></p>
+<hr>
 
-      <h2 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/06/21/将hexo博客主题更换为NexT/" itemprop="url">
-              
-                <span itemprop="name">将hexo博客主题更换为NexT</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-21T15:40:00+08:00"
-              content="2017-06-21" >
-          06-21
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/12/typeof,instanceof和constructor/" rel="next" title="typeof,instanceof和constructor">
+                <i class="fa fa-chevron-left"></i> typeof,instanceof和constructor
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +416,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -492,10 +613,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
